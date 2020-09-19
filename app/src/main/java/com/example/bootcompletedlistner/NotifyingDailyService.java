@@ -27,7 +27,8 @@ public class NotifyingDailyService extends Service {
     @Override
     public int onStartCommand(Intent pIntent, int flags, int startId) {
         // TODO Auto-generated method stub
-        Logger.log("onStartCommand NotifyingDailyService");
+
+        Logger.saveInternalStorage(this,"onStartCommand NotifyingDailyService");
         Toast.makeText(this, "NotifyingDailyService", Toast.LENGTH_LONG).show();
 
         Log.d(TAG, "onStartCommand: NotifyingDailyService");
